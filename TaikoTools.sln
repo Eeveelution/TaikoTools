@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ReplayParser", "TaikoTools.ReplayParser\TaikoTools.ReplayParser.csproj", "{481CB4C1-6D30-48FF-8409-000FBCA3C0EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ReplayParser.TestTool", "TaikoTools.ReplayParser.TestTool\TaikoTools.ReplayParser.TestTool.csproj", "{8961441B-1D4E-4865-808A-4B1CE95C98D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{481CB4C1-6D30-48FF-8409-000FBCA3C0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{481CB4C1-6D30-48FF-8409-000FBCA3C0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{481CB4C1-6D30-48FF-8409-000FBCA3C0EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8961441B-1D4E-4865-808A-4B1CE95C98D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8961441B-1D4E-4865-808A-4B1CE95C98D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8961441B-1D4E-4865-808A-4B1CE95C98D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8961441B-1D4E-4865-808A-4B1CE95C98D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
