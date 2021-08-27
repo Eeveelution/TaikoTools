@@ -6,14 +6,14 @@ using osuTK;
 using TaikoToolsToolRuntime.Resources;
 
 namespace TaikoTools.ToolRuntime.Game {
-    public class TaikoToolsToolRuntimeGameBase : osu.Framework.Game {
+    public class GameBase : osu.Framework.Game {
         // Anything in this class is shared between the test browser and the game implementation.
         // It allows for caching global dependencies that should be accessible to tests, or changing
         // the screen scaling for all components including the test browser and framework overlays.
 
         protected override Container<Drawable> Content { get; }
 
-        protected TaikoToolsToolRuntimeGameBase() {
+        protected GameBase() {
             // Ensure game and tests scale with window size and screen DPI.
             base.Content.Add(Content = new DrawSizePreservingFillContainer {
                 // You may want to change TargetDrawSize to your "default" resolution, which will decide how things scale and position when using absolute coordinates.

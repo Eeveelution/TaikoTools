@@ -4,12 +4,12 @@ using osu.Framework.Platform;
 using osu.Framework.Testing;
 
 namespace TaikoTools.ToolRuntime.Game.Tests {
-    public class TaikoToolsToolRuntimeTestBrowser : TaikoToolsToolRuntimeGameBase {
+    public class TestBrowser : GameBase {
         protected override void LoadComplete() {
             base.LoadComplete();
 
             AddRange(new Drawable[] {
-                new TestBrowser("TaikoTools.ToolRuntime"), new CursorContainer()
+                new osu.Framework.Testing.TestBrowser("TaikoTools.ToolRuntime"), new CursorContainer()
             });
         }
 
