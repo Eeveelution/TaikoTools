@@ -9,7 +9,7 @@ namespace TaikoTools.ToolRuntime.Game.Tests {
             base.LoadComplete();
 
             AddRange(new Drawable[] {
-                new TestBrowser("TaikoToolsToolRuntime"), new CursorContainer()
+                new TestBrowser("TaikoTools.ToolRuntime"), new CursorContainer()
             });
         }
 

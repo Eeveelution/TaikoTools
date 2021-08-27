@@ -50,6 +50,7 @@ namespace TaikoTools.ReplayParser
                     else if (currentFrame.TaikoKeys.IsKeyDown(TaikoKeys.lRed)) {
                         ReplayClick foundClick = currentlyHeld.Find(click => click.Key == TaikoKeys.lRed);
 
+
                         if (foundClick != null) {
                             foundClick.Frames.Add(currentFrame);
                             foundClick.UpTime       = currentTime;
@@ -127,8 +128,7 @@ namespace TaikoTools.ReplayParser
                 foreach (ReplayClick replayClick in toRemove) {
                     currentlyHeld.Remove(replayClick);
                 }
-
-                //optimization
+                
 
             }
 
