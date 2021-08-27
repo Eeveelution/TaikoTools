@@ -33,6 +33,7 @@ namespace TaikoTools.ToolRuntime.Game {
 
                 foreach (Type taikoToolType in types) {
                     TaikoTool tool = (TaikoTool) Activator.CreateInstance(taikoToolType);
+                    tool.AssemblyPath = Path.GetFullPath(assembly);
                     taikoTools.Add(tool);
                 }
             }

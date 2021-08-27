@@ -1,3 +1,4 @@
+using System;
 using osu.Framework.Screens;
 
 namespace TaikoTools.ToolRuntime.Game.ToolAPI {
@@ -29,7 +30,11 @@ namespace TaikoTools.ToolRuntime.Game.ToolAPI {
         /// This gets run before <see cref="Run"/> does, it basically serves to Initialize <see cref="Config"/>
         /// </summary>
         internal void Initialize() {
-            this.Config = new($"{this.ToolName}.{this.ToolAuthor}.cfg");
+            this.Config = new($"{this.AssemblyPath}.cfg");
         }
+        /// <summary>
+        /// .tkt File Path, used for neater Configuration management
+        /// </summary>
+        internal string AssemblyPath = Environment.CurrentDirectory;
     }
 }
