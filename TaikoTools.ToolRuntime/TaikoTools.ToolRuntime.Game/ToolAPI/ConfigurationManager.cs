@@ -1,12 +1,21 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace TaikoTools.ToolRuntime.Game.ToolAPI {
     public class ConfigurationManager {
         private Dictionary<string, string> _configuration;
 
+        private string _filename;
+
         public ConfigurationManager(string filename) {
+            this._filename = filename;
+
+            if (!File.Exists(filename)) {
+                File.WriteAllText(filename, "");
+            }
+
             string[] fileData = File.ReadAllLines(filename);
 
             foreach (string s in fileData) {
@@ -29,6 +38,24 @@ namespace TaikoTools.ToolRuntime.Game.ToolAPI {
             bool found = this._configuration.TryGetValue(key, out string outVal);
 
             return !found ? null : outVal;
+        }
+
+        public void Set(string key, string value) {
+            if (!this._configuration.ContainsKey(key)) {
+                this._configuration.Add(key, value);
+
+                this.Save();
+
+                return;
+            }
+
+            this._configuration[key] = value;
+        }
+
+        public void Save() {
+            List<string> file = this._configuration.Select(entry => $"{entry.Key}={entry.Value}").ToList();
+
+            File.WriteAllLines(this._filename, file.ToArray());
         }
     }
 }
