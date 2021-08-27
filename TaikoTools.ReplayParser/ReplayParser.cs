@@ -42,6 +42,8 @@ namespace TaikoTools.ReplayParser
                                 UpTime       = currentTime
                             };
 
+                            newClick.Frames.Add(currentFrame);
+
                             currentlyHeld.Add(newClick);
                         }
                     }
@@ -60,6 +62,8 @@ namespace TaikoTools.ReplayParser
                                 LastSeenTime = currentTime,
                                 UpTime       = currentTime
                             };
+
+                            newClick.Frames.Add(currentFrame);
 
                             currentlyHeld.Add(newClick);
                         }
@@ -80,6 +84,8 @@ namespace TaikoTools.ReplayParser
                                 UpTime       = currentTime
                             };
 
+                            newClick.Frames.Add(currentFrame);
+
                             currentlyHeld.Add(newClick);
                         }
                     }
@@ -99,10 +105,14 @@ namespace TaikoTools.ReplayParser
                                 UpTime       = currentTime
                             };
 
+                            newClick.Frames.Add(currentFrame);
+
                             currentlyHeld.Add(newClick);
                         }
                     }
                 }
+
+                List<ReplayClick> toRemove = new();
 
                 for (int i = 0; i != currentlyHeld.Count; i++) {
                     ReplayClick heldKey = currentlyHeld[i];
@@ -110,10 +120,18 @@ namespace TaikoTools.ReplayParser
                     if ((currentTime - heldKey.LastSeenTime) > 18) {
                         totalClicks.Add(heldKey);
 
-                        currentlyHeld.Remove(heldKey);
+                        toRemove.Add(heldKey);
                     }
                 }
+
+                foreach (ReplayClick replayClick in toRemove) {
+                    currentlyHeld.Remove(replayClick);
+                }
+
+                //optimization
+
             }
+
 
             return totalClicks;
         }

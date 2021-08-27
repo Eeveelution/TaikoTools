@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using TaikoTools.ReplayParser;
 
-namespace TaikoTools.ReplayParser.TestTool {
-    class Program {
-        static void Main(string[] args) {
-            Console.WriteLine("Hello World!");
-        }
-    }
-}
+Stopwatch stopwatch = Stopwatch.StartNew();
+
+List<ReplayClick> clicks = new ReplayParser("replay.osr").ParseReplay();
+
+stopwatch.Stop();
+
+Console.WriteLine("Elapsed Milliseconds: " + stopwatch.ElapsedMilliseconds.ToString());
