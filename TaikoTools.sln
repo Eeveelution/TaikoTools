@@ -4,13 +4,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ReplayParser", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ReplayParser.TestTool", "TaikoTools.ReplayParser.TestTool\TaikoTools.ReplayParser.TestTool.csproj", "{8961441B-1D4E-4865-808A-4B1CE95C98D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Game", "TaikoToolsToolRuntime\TaikoTools.ToolRuntime.Game\TaikoTools.ToolRuntime.Game.csproj", "{96690DC8-70C3-4450-BDA7-18B285CEE5E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Game", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Game\TaikoTools.ToolRuntime.Game.csproj", "{96690DC8-70C3-4450-BDA7-18B285CEE5E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Game.Tests", "TaikoToolsToolRuntime\TaikoTools.ToolRuntime.Game.Tests\TaikoTools.ToolRuntime.Game.Tests.csproj", "{D2E4A7AB-9CFD-4CD1-AE4C-1A1F214D2D1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Game.Tests", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Game.Tests\TaikoTools.ToolRuntime.Game.Tests.csproj", "{D2E4A7AB-9CFD-4CD1-AE4C-1A1F214D2D1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Resources", "TaikoToolsToolRuntime\TaikoTools.ToolRuntime.Resources\TaikoTools.ToolRuntime.Resources.csproj", "{4831981D-0DE1-4D8C-8E61-27973AE3E7B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Resources", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Resources\TaikoTools.ToolRuntime.Resources.csproj", "{4831981D-0DE1-4D8C-8E61-27973AE3E7B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Desktop", "TaikoToolsToolRuntime\TaikoTools.ToolRuntime.Desktop\TaikoTools.ToolRuntime.Desktop.csproj", "{979253B3-60D9-4536-9B0D-1444FA009382}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Desktop", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Desktop\TaikoTools.ToolRuntime.Desktop.csproj", "{979253B3-60D9-4536-9B0D-1444FA009382}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
