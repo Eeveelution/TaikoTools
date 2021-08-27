@@ -7,17 +7,18 @@ using osu.Framework.Graphics.Sprites;
 using osu.Framework.Screens;
 using osuTK;
 using osuTK.Graphics;
+using TaikoTools.Components.FrameTimeline;
 using TaikoTools.ReplayParser;
-using TaikoTools.Tools.Components.FrameTimeline;
 
 namespace TaikoTools.ToolRuntime.Game {
     public class MainScreen : Screen {
         [BackgroundDependencyLoader]
         private void load() {
             InternalChildren = new Drawable[] {
-                //new Box {
-                //    Colour = Color4.Violet, RelativeSizeAxes = Axes.Both,
-                //},
+                //soon to be background
+                new Box {
+                    Colour = Color4.Violet, RelativeSizeAxes = Axes.Both,
+                },
                 new SpriteText {
                     Y      = 120,
                     Text   = "Taiko Tools",

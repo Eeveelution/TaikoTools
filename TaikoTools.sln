@@ -12,11 +12,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Reso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Desktop", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Desktop\TaikoTools.ToolRuntime.Desktop.csproj", "{979253B3-60D9-4536-9B0D-1444FA009382}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.Tools.Components.FrameTimeline", "TaikoTools.Tools.Components.FrameTimeline\TaikoTools.Tools.Components.FrameTimeline.csproj", "{F26BA43F-C31F-4FC3-8836-022889A8DC02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.Components.FrameTimeline", "TaikoTools.Components.FrameTimeline\TaikoTools.Components.FrameTimeline.csproj", "{F26BA43F-C31F-4FC3-8836-022889A8DC02}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{C716E927-D158-4234-9265-1417385C0080}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{A4FBC2F5-568F-4533-AFAE-509057031276}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.Tool.ReplayViewer", "TaikoTools.Tool.ReplayViewer\TaikoTools.Tool.ReplayViewer.csproj", "{A4AA90DF-FCD2-46C7-90CF-185D3278717C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,8 +54,13 @@ Global
 		{F26BA43F-C31F-4FC3-8836-022889A8DC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F26BA43F-C31F-4FC3-8836-022889A8DC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F26BA43F-C31F-4FC3-8836-022889A8DC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4AA90DF-FCD2-46C7-90CF-185D3278717C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4AA90DF-FCD2-46C7-90CF-185D3278717C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4AA90DF-FCD2-46C7-90CF-185D3278717C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4AA90DF-FCD2-46C7-90CF-185D3278717C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F26BA43F-C31F-4FC3-8836-022889A8DC02} = {C716E927-D158-4234-9265-1417385C0080}
+		{A4AA90DF-FCD2-46C7-90CF-185D3278717C} = {A4FBC2F5-568F-4533-AFAE-509057031276}
 	EndGlobalSection
 EndGlobal

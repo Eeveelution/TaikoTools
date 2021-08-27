@@ -12,6 +12,7 @@ namespace TaikoTools.ReplayParser
 
         public ReplayParser(Replay replay) {
             this._workingReplay = replay;
+
         }
 
         public ReplayParser(string osrFilename) {
