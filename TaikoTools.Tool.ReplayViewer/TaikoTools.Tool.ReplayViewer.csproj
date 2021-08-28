@@ -4,9 +4,5 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Game\TaikoTools.ToolRuntime.Game.csproj" />
-    </ItemGroup>
-
 
 </Project>
