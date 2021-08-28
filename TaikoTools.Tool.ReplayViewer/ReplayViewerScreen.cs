@@ -18,6 +18,11 @@ namespace TaikoTools.Tool.ReplayViewer {
                 new Box {
                     Colour = Color4.Violet, RelativeSizeAxes = Axes.Both,
                 },
+                new Box {
+                    Colour = Color4.DimGray,
+                    Position = new Vector2(0, 0),
+                    Size = new Vector2(1366, 48)
+                },
                 new SpriteText {
                     Y      = 20,
                     Text   = "Taiko Replay Viewer",
@@ -25,7 +30,7 @@ namespace TaikoTools.Tool.ReplayViewer {
                     Origin = Anchor.TopCentre,
                     Font   = FontUsage.Default.With(size: 40)
                 },
-                new FrameTimeline( new Vector2(1366, 768), new Vector2(1366, 480f), new List<ReplayClick>())
+                new FrameTimeline( new Vector2(1366, 768), new Vector2(1366, 288), new List<ReplayClick>())
             };
         }
     }

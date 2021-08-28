@@ -3,12 +3,15 @@ using osu.Framework.Allocation;
 using osu.Framework.Graphics;
 using osu.Framework.Graphics.Containers;
 using osu.Framework.Graphics.Shapes;
+using osu.Framework.Input.Events;
 using osuTK;
 using osuTK.Graphics;
 using TaikoTools.ReplayParser;
 
 namespace TaikoTools.Components.FrameTimeline {
     public class FrameTimeline : CompositeDrawable {
+        public override bool HandlePositionalInput { get; } = true;
+
         private Container _frameContainer;
 
         public Vector2 TargetSize;
@@ -21,20 +24,26 @@ namespace TaikoTools.Components.FrameTimeline {
 
         [BackgroundDependencyLoader]
         private void load() {
+            this.Size     = this.TargetSize;
+            this.Position = new Vector2(0, this.WindowSize.Y - this.TargetSize.Y);
+
             this.InternalChild = this._frameContainer = new Container {
-                Anchor               = Anchor.BottomCentre,
-                RelativePositionAxes = Axes.Both,
-                RelativeSizeAxes     = Axes.Both,
-                Origin               = Anchor.TopLeft,
-                Position             = new Vector2(0, this.WindowSize.Y - this.WindowSize.Y),
+                Anchor   = Anchor.TopLeft,
+                Size     = this.TargetSize,
+                Origin   = Anchor.TopLeft,
                 Children = new [] {
                     new Box() {
-                        Position = new Vector2(0, this.TargetSize.Y),
                         Size     = this.TargetSize,
-                        Colour   = Color4.Red
+                        Colour   = Color4.Red,
+
                     },
                 },
             };
+        }
+
+        protected override bool OnClick(ClickEvent e) {
+            base.OnClick(e);
+            return true;
         }
     }
 }
