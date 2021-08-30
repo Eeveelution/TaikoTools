@@ -37,7 +37,7 @@ namespace TaikoTools.ToolRuntime.Screens {
             string[] externAssemblies = Directory.GetFiles("Tools/", "*.dll");
 
             foreach (string assembly in externAssemblies) {
-                Assembly loadedAssembly = Assembly.LoadFile(Path.GetFullPath(assembly));
+                Assembly loadedAssembly = Assembly.LoadFrom(Path.GetFullPath(assembly));
             }
 
             int height = 96;

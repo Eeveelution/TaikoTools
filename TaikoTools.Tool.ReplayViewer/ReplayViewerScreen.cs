@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using PeppyCodeEngineGL.Engine.Graphics;
 using TaikoTools.Components.FrameTimeline;
-using static TaikoTools.ReplayParser;
+using TaikoTools.ReplayParser;
 
 namespace TaikoTools.Tool.ReplayViewer {
     public class ReplayViewerScreen : Screen {
