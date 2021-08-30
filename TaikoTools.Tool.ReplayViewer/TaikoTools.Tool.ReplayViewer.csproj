@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\PeppyCodeEngine\PeppyCodeEngineGL\PeppyCodeEngineGL.csproj" />
+      <ProjectReference Include="..\TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.csproj" />
     </ItemGroup>
 
 
