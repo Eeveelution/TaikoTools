@@ -21,9 +21,9 @@ namespace TaikoTools.ToolRuntime.Screens {
 
             List<TaikoTool> taikoTools = new();
 
-            string[] assemblies = Directory.GetFiles("Tools/", "*.tkt");
+            string[] toolAssemblies = Directory.GetFiles("Tools/", "*.tkt");
 
-            foreach (string assembly in assemblies) {
+            foreach (string assembly in toolAssemblies) {
                 Assembly loadedAssembly = Assembly.LoadFile(Path.GetFullPath(assembly));
 
                 List<Type> types = loadedAssembly.GetTypes().Where(type => type.IsSubclassOf(typeof(TaikoTool))).ToList();
@@ -32,6 +32,12 @@ namespace TaikoTools.ToolRuntime.Screens {
                     TaikoTool tool = (TaikoTool) Activator.CreateInstance(taikoToolType);
                     taikoTools.Add(tool);
                 }
+            }
+
+            string[] externAssemblies = Directory.GetFiles("Tools/", "*.dll");
+
+            foreach (string assembly in externAssemblies) {
+                Assembly loadedAssembly = Assembly.LoadFile(Path.GetFullPath(assembly));
             }
 
             int height = 96;
@@ -59,6 +65,10 @@ namespace TaikoTools.ToolRuntime.Screens {
 
                 height += 72;
             }
+
+
+
+            base.Initialize();
         }
     }
 }
