@@ -1,6 +1,8 @@
 
+using PeppyCodeEngineGL.Engine.Graphics;
+
 namespace TaikoTools.Tool.ReplayViewer {
-    public class ReplayViewerScreen{
+    public class ReplayViewerScreen : Screen {
 
     }
 }
