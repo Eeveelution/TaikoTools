@@ -28,7 +28,7 @@ namespace TaikoTools.Components.FrameTimeline {
             this.UpdateSprite(timeline);
 
             timeline.CurrentTime.ValueChanged += (_, _) => {
-                UpdateSprite(this._timeline);
+                this.UpdateSprite(this._timeline);
             };
         }
 
