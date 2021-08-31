@@ -30,6 +30,10 @@ namespace TaikoTools.Components.FrameTimeline {
             timeline.CurrentTime.ValueChanged += (_, _) => {
                 this.UpdateSprite(this._timeline);
             };
+
+            timeline.TimelineRange.ValueChanged += (_, _) => {
+                this.UpdateSprite(this._timeline);
+            };
         }
 
         public void UpdateSprite(FrameTimeline timeline) {

@@ -3,15 +3,18 @@ using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using PeppyCodeEngineGL.Engine;
 using PeppyCodeEngineGL.Engine.Audio;
 using PeppyCodeEngineGL.Engine.Graphics.Sprites;
 using PeppyCodeEngineGL.Engine.Helpers;
+using PeppyCodeEngineGL.Engine.Input;
 using TaikoTools.ReplayParser;
 
 namespace TaikoTools.Components.FrameTimeline {
     public class FrameTimeline : pDrawable {
-        public double        TimelineRange = 2000.0;
-        public Bindable<int> CurrentTime   = new Bindable<int>(0);
+        public Bindable<double> TimelineRange = new Bindable<double>(2000.0);
+        public Bindable<int>    CurrentTime   = new Bindable<int>(0);
 
         private List<DrawableFrame> _drawableFrames = new();
 
@@ -23,6 +26,13 @@ namespace TaikoTools.Components.FrameTimeline {
 
             for(int i = 0; i != replayClicks.Count; i++)
                 this._drawableFrames.Add(new DrawableFrame(this, replayClicks[i]));
+
+            InputManager.OnKeyPress += (sender, args) => {
+                if (args.Key == Keys.Right)
+                    this.CurrentTime += 250;
+                if (args.Key == Keys.Left)
+                    this.CurrentTime -= 250;
+            };
         }
 
         public double TimeToTimelinePos(double currentTime, double time) {
@@ -33,8 +43,8 @@ namespace TaikoTools.Components.FrameTimeline {
         }
 
         public override void Draw(SpriteBatch batch, SpriteManagerArgs args) {
-            double minTime = AudioController.Time - this.TimelineRange / 2.0;
-            double maxTime = AudioController.Time + this.TimelineRange / 2.0;
+            double minTime = this.CurrentTime - this.TimelineRange / 2.0;
+            double maxTime = this.CurrentTime + this.TimelineRange / 2.0;
 
             if (AudioController.Time < 1500) {
                 minTime = 0;
