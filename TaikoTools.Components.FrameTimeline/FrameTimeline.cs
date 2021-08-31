@@ -15,6 +15,8 @@ namespace TaikoTools.Components.FrameTimeline {
         private List<DrawableFrame> _drawableFrames = new();
 
         public FrameTimeline(List<ReplayClick> replayClicks) {
+            this.AlwaysDraw = true;
+
             for(int i = 0; i != replayClicks.Count; i++)
                 this._drawableFrames.Add(new DrawableFrame(this, replayClicks[i]));
         }

@@ -1,5 +1,6 @@
 
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using PeppyCodeEngineGL.Engine.Graphics;
 using TaikoTools.Components.FrameTimeline;
 using TaikoTools.ReplayParser;
@@ -14,6 +15,12 @@ namespace TaikoTools.Tool.ReplayViewer {
             this.SpriteManager.Add(timeline);
 
             base.Initialize();
+        }
+
+        public override void Draw(GameTime gameTime) {
+            this.SpriteManager.Draw();
+
+            base.Draw(gameTime);
         }
     }
 }
