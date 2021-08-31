@@ -5,7 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Game\TaikoTools.ToolRuntime.Game.csproj" />
+      <ProjectReference Include="..\PeppyCodeEngine\PeppyCodeEngineGL\PeppyCodeEngineGL.csproj" />
+      <ProjectReference Include="..\TaikoTools.Components.FrameTimeline\TaikoTools.Components.FrameTimeline.csproj" />
+      <ProjectReference Include="..\TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.csproj" />
     </ItemGroup>
 
 

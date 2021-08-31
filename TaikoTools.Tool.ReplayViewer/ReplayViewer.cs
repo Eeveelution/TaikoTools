@@ -1,6 +1,5 @@
-﻿using System;
-using osu.Framework.Screens;
-using TaikoTools.ToolRuntime.Game.ToolAPI;
+﻿using PeppyCodeEngineGL.Engine.Graphics;
+using TaikoTools.ToolRuntime;
 
 namespace TaikoTools.Tool.ReplayViewer {
     public class ReplayViewer : TaikoTool {

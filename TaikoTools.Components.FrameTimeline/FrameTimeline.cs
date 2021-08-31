@@ -1,49 +1,51 @@
-﻿using System.Collections.Generic;
-using osu.Framework.Allocation;
-using osu.Framework.Graphics;
-using osu.Framework.Graphics.Containers;
-using osu.Framework.Graphics.Shapes;
-using osu.Framework.Input.Events;
-using osuTK;
-using osuTK.Graphics;
+﻿
+using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework.Graphics;
+using PeppyCodeEngineGL.Engine.Audio;
+using PeppyCodeEngineGL.Engine.Graphics.Sprites;
+using PeppyCodeEngineGL.Engine.Helpers;
 using TaikoTools.ReplayParser;
 
 namespace TaikoTools.Components.FrameTimeline {
-    public class FrameTimeline : CompositeDrawable {
-        public override bool HandlePositionalInput { get; } = true;
+    public class FrameTimeline : pDrawable {
+        public double        TimelineRange = 2000.0;
+        public Bindable<int> CurrentTime   = new Bindable<int>(0);
 
-        private Container _frameContainer;
+        private List<DrawableFrame> _drawableFrames = new();
 
-        public Vector2 TargetSize;
-        public Vector2 WindowSize;
+        public FrameTimeline(List<ReplayClick> replayClicks) {
+            this.AlwaysDraw = true;
 
-        public FrameTimeline(Vector2 windowSize, Vector2 targetSize, List<ReplayClick> replayClicks) {
-            this.TargetSize = targetSize;
-            this.WindowSize = windowSize;
+            for(int i = 0; i != replayClicks.Count; i++)
+                this._drawableFrames.Add(new DrawableFrame(this, replayClicks[i]));
         }
 
-        [BackgroundDependencyLoader]
-        private void load() {
-            this.Size     = this.TargetSize;
-            this.Position = new Vector2(0, this.WindowSize.Y - this.TargetSize.Y);
+        public double TimeToTimelinePos(double currentTime, double time) {
+            double timelineLeftBound = currentTime  - this.TimelineRange / 2.0;
+            double timelineRightBound = currentTime + this.TimelineRange / 2.0;
 
-            this.InternalChild = this._frameContainer = new Container {
-                Anchor   = Anchor.TopLeft,
-                Size     = this.TargetSize,
-                Origin   = Anchor.TopLeft,
-                Children = new [] {
-                    new Box() {
-                        Size     = this.TargetSize,
-                        Colour   = Color4.Red,
-
-                    },
-                },
-            };
+            return Math.Min(Math.Max((0.0 + ((this.TimelineRange - timelineLeftBound) / this.TimelineRange) * this.TimelineRange / 2.0), 0.0), 0.0 + this.TimelineRange / 2.0);
         }
 
-        protected override bool OnClick(ClickEvent e) {
-            base.OnClick(e);
-            return true;
+        public override void Draw(SpriteBatch batch, SpriteManagerArgs args) {
+            double minTime = AudioController.Time - this.TimelineRange / 2.0;
+            double maxTime = AudioController.Time + this.TimelineRange / 2.0;
+
+            if (AudioController.Time < 1500) {
+                minTime = 0;
+            }
+
+            List<DrawableFrame> toDraw = this._drawableFrames.FindAll(frame => frame.Time >= AudioController.Time && frame.Time <= AudioController.Time);
+
+            for (int i = 0; i < toDraw.Count; i++) {
+                toDraw[i].GetSprite().Draw(batch, args);
+            }
+        }
+
+        public void Update() {
+            if (AudioController.MasterAudioTrack.IsPlaying)
+                this.CurrentTime = AudioController.Time;
         }
     }
 }

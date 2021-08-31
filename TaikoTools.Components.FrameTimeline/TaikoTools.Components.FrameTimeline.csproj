@@ -6,11 +6,8 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\PeppyCodeEngine\PeppyCodeEngineGL\PeppyCodeEngineGL.csproj" />
       <ProjectReference Include="..\TaikoTools.ReplayParser\TaikoTools.ReplayParser.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <PackageReference Include="ppy.osu.Framework" Version="2021.728.0" />
     </ItemGroup>
 
 </Project>

@@ -2,15 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ReplayParser", "TaikoTools.ReplayParser\TaikoTools.ReplayParser.csproj", "{481CB4C1-6D30-48FF-8409-000FBCA3C0EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ReplayParser.TestTool", "TaikoTools.ReplayParser.TestTool\TaikoTools.ReplayParser.TestTool.csproj", "{8961441B-1D4E-4865-808A-4B1CE95C98D4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Game", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Game\TaikoTools.ToolRuntime.Game.csproj", "{96690DC8-70C3-4450-BDA7-18B285CEE5E5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Game.Tests", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Game.Tests\TaikoTools.ToolRuntime.Game.Tests.csproj", "{D2E4A7AB-9CFD-4CD1-AE4C-1A1F214D2D1D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Resources", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Resources\TaikoTools.ToolRuntime.Resources.csproj", "{4831981D-0DE1-4D8C-8E61-27973AE3E7B7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime.Desktop", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.Desktop\TaikoTools.ToolRuntime.Desktop.csproj", "{979253B3-60D9-4536-9B0D-1444FA009382}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ReplayParser.Test", "TaikoTools.ReplayParser.Test\TaikoTools.ReplayParser.Test.csproj", "{8961441B-1D4E-4865-808A-4B1CE95C98D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.Components.FrameTimeline", "TaikoTools.Components.FrameTimeline\TaikoTools.Components.FrameTimeline.csproj", "{F26BA43F-C31F-4FC3-8836-022889A8DC02}"
 EndProject
@@ -19,6 +11,12 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{A4FBC2F5-568F-4533-AFAE-509057031276}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.Tool.ReplayViewer", "TaikoTools.Tool.ReplayViewer\TaikoTools.Tool.ReplayViewer.csproj", "{A4AA90DF-FCD2-46C7-90CF-185D3278717C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{2A8F0C60-E743-47B9-894C-5EA913F14568}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeppyCodeEngineGL", "PeppyCodeEngine\PeppyCodeEngineGL\PeppyCodeEngineGL.csproj", "{1A21B84C-AA8C-4F3B-904B-A2ABA1542265}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaikoTools.ToolRuntime", "TaikoTools.ToolRuntime\TaikoTools.ToolRuntime.csproj", "{928F655F-A5EE-4869-A55A-C236B073BE0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,22 +32,6 @@ Global
 		{8961441B-1D4E-4865-808A-4B1CE95C98D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8961441B-1D4E-4865-808A-4B1CE95C98D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8961441B-1D4E-4865-808A-4B1CE95C98D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{96690DC8-70C3-4450-BDA7-18B285CEE5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{96690DC8-70C3-4450-BDA7-18B285CEE5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{96690DC8-70C3-4450-BDA7-18B285CEE5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{96690DC8-70C3-4450-BDA7-18B285CEE5E5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2E4A7AB-9CFD-4CD1-AE4C-1A1F214D2D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2E4A7AB-9CFD-4CD1-AE4C-1A1F214D2D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2E4A7AB-9CFD-4CD1-AE4C-1A1F214D2D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2E4A7AB-9CFD-4CD1-AE4C-1A1F214D2D1D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4831981D-0DE1-4D8C-8E61-27973AE3E7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4831981D-0DE1-4D8C-8E61-27973AE3E7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4831981D-0DE1-4D8C-8E61-27973AE3E7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4831981D-0DE1-4D8C-8E61-27973AE3E7B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{979253B3-60D9-4536-9B0D-1444FA009382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{979253B3-60D9-4536-9B0D-1444FA009382}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{979253B3-60D9-4536-9B0D-1444FA009382}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{979253B3-60D9-4536-9B0D-1444FA009382}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F26BA43F-C31F-4FC3-8836-022889A8DC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F26BA43F-C31F-4FC3-8836-022889A8DC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F26BA43F-C31F-4FC3-8836-022889A8DC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,9 +40,18 @@ Global
 		{A4AA90DF-FCD2-46C7-90CF-185D3278717C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4AA90DF-FCD2-46C7-90CF-185D3278717C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4AA90DF-FCD2-46C7-90CF-185D3278717C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A21B84C-AA8C-4F3B-904B-A2ABA1542265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A21B84C-AA8C-4F3B-904B-A2ABA1542265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A21B84C-AA8C-4F3B-904B-A2ABA1542265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A21B84C-AA8C-4F3B-904B-A2ABA1542265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{928F655F-A5EE-4869-A55A-C236B073BE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{928F655F-A5EE-4869-A55A-C236B073BE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{928F655F-A5EE-4869-A55A-C236B073BE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{928F655F-A5EE-4869-A55A-C236B073BE0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F26BA43F-C31F-4FC3-8836-022889A8DC02} = {C716E927-D158-4234-9265-1417385C0080}
 		{A4AA90DF-FCD2-46C7-90CF-185D3278717C} = {A4FBC2F5-568F-4533-AFAE-509057031276}
+		{1A21B84C-AA8C-4F3B-904B-A2ABA1542265} = {2A8F0C60-E743-47B9-894C-5EA913F14568}
 	EndGlobalSection
 EndGlobal

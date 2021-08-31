@@ -1,0 +1,3 @@
+[submodule "PeppyCodeEngine"]
+	path = PeppyCodeEngine
+	url = https://github.com/Beyley/PeppyCodeEngine
